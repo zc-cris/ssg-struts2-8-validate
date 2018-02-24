@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+     "-//Apache Struts//XWork Validator 1.0.2//EN"
+     "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+	<!-- 针对 age 属性进行验证,基于字段的验证 -->
+	<field name="age">
+		<field-validator type="int">
+			<!-- 针对不同的请求设置不同的验证规则 -->
+			<param name="min">1</param>
+			<param name="max">100</param>
+			<message key="age.error"></message>
+		</field-validator>
+	</field>
+	
+</validators>
